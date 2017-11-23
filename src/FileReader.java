@@ -3,19 +3,22 @@ import java.util.Scanner;
 
 public class FileReader {
 
-	public FileReader() {
-		// TODO Auto-generated constructor stub
-	}
-
 	public static void main(String[] args) throws IOException {
-		// TODO Auto-generated method stub
 		
-		Scanner input = new Scanner(new File("input.txt"));
-		
-		Hola que tal estamos
+		String text = "";
+		Scanner input = new Scanner(new File("src\\input.txt"));
 		
 		System.out.println();	
 		
-		while(input.hasNextInt())
+		while(input.hasNext()) {
+			 String i = input.next();
+	         text += i;
+		}
+		
+		System.out.println(text);
+	}
+	
+	public FileReader() {
+		// TODO Auto-generated constructor stub
 	}
 }
