@@ -12,6 +12,8 @@ public class FileReader {
 		
 		Scanner input = new Scanner(new File("input.txt"));
 		
+		Hola que tal estamos
+		
 		System.out.println();	
 		
 		while(input.hasNextInt())
