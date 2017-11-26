@@ -38,6 +38,11 @@ public class FileReader {
 		System.out.println(text);
 
 		BooleanVar isEmpty[][] = new BooleanVar[st][pl];
+		BooleanVar catSup[][] = new BooleanVar[st][pl];
+		BooleanVar catInf[][] = new BooleanVar[st][pl];
+		BooleanVar catEq[][] = new BooleanVar[st][pl];
+		
+		
 		int cont = 0;
 		
 		for(int i = 0; i<st; i++) {
@@ -52,11 +57,18 @@ public class FileReader {
 			}
 		}
 		
+		
+		
 		cont = 0;
 		
 		for(int i = 0; i < st; i++) {
-			for(int j = 0; i < pl-1; j++) {
+			for(int j = 0; i < pl; j++) {
 				if(text.charAt(cont)<text.charAt(cont+2))
+					catSup[i][j] = new BooleanVar(store, "La categoría de la posición "+j+" de la calle "+i+" NO es mayor que la posición de la derecha"); 
+				else
+					catSup[i][j] = new BooleanVar(store, "La categoría de la posición "+j+" de la calle "+i+" SI es mayor que la posición de la derecha"); 
+				
+				System.out.println(catSup[i][j]);
 				
 				cont+=2;
 			}
