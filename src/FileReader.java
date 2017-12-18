@@ -48,9 +48,9 @@ public class FileReader {
 		for(int i = 0; i<st; i++) {
 			for(int j = 0; j<pl; j++) {
 				if(text.charAt(cont) == '_')
-					isEmpty[i][j] = new BooleanVar(store, "La posición "+j+" de la calle "+i+" está: Vacía"); 
+					isEmpty[i][j] = new BooleanVar(store, "La posiciï¿½n "+j+" de la calle "+i+" estï¿½: Vacï¿½a"); 
 				else
-					isEmpty[i][j] = new BooleanVar(store, "La posición "+j+" de la calle "+i+" está: Ocupada"); 
+					isEmpty[i][j] = new BooleanVar(store, "La posiciï¿½n "+j+" de la calle "+i+" estï¿½: Ocupada"); 
 				cont+=2;
 				
 				System.out.println(isEmpty[i][j]);
@@ -64,9 +64,9 @@ public class FileReader {
 		for(int i = 0; i < st; i++) {
 			for(int j = 0; i < pl; j++) {
 				if(text.charAt(cont)<text.charAt(cont+2))
-					catSup[i][j] = new BooleanVar(store, "La categoría de la posición "+j+" de la calle "+i+" NO es mayor que la posición de la derecha"); 
+					catSup[i][j] = new BooleanVar(store, "La categorï¿½a de la posiciï¿½n "+j+" de la calle "+i+" NO es mayor que la posiciï¿½n de la derecha"); 
 				else
-					catSup[i][j] = new BooleanVar(store, "La categoría de la posición "+j+" de la calle "+i+" SI es mayor que la posición de la derecha"); 
+					catSup[i][j] = new BooleanVar(store, "La categorï¿½a de la posiciï¿½n "+j+" de la calle "+i+" SI es mayor que la posiciï¿½n de la derecha"); 
 				
 				System.out.println(catSup[i][j]);
 				
@@ -172,3 +172,5 @@ public class FileReader {
 		satWrapper.addModelClause(clause.toArray());
 	}
 }
+
+/*PRUEBAAAA*/
